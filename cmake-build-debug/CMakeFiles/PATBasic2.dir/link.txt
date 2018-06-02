@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/PATBasic2.dir/patbasic/test1081.cpp.o CMakeFiles/PATBasic2.dir/patbasic/test1082.cpp.o CMakeFiles/PATBasic2.dir/patbasic/test1083.cpp.o CMakeFiles/PATBasic2.dir/patbasic/test1084.cpp.o CMakeFiles/PATBasic2.dir/patbasic/test1085.cpp.o CMakeFiles/PATBasic2.dir/test.cpp.o  -o PATBasic2 
