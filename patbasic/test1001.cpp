@@ -2,18 +2,25 @@
 
 using namespace std;
 
-int test1001() {
+
+int getCallatz(int);
+
+int main() {
     int n;
     cin >> n;
-    int count = 0;
-    while (n != 1) {
-        count++;
+    cout << getCallatz(n) << endl;
+    return 0;
+}
+
+
+int getCallatz(int n) {
+    int cnt = 0;
+    while (n != 1 && ++cnt) {
         if (n % 2 == 0) {
-            n = n / 2;
+            n /= 2;
         } else {
             n = (3 * n + 1) / 2;
         }
     }
-    cout << count << endl;
-    return 0;
+    return cnt;
 }

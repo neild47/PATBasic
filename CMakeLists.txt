@@ -3,4 +3,5 @@ project(PATBasic2)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(PATBasic2 patbasic/test1081.cpp patbasic/test1082.cpp patbasic/test1083.cpp patbasic/test1084.cpp patbasic/test1085.cpp test.cpp)
+add_executable(basic_1001 patbasic/test1001.cpp)
+add_executable(basic_1002 patbasic/test1002.cpp)

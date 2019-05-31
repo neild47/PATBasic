@@ -3,26 +3,40 @@
 //
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
-static string strings[] = {"ling", "yi", "er", "san", "si", "wu", "liu", "qi", "ba", "jiu", "shi"};
 
-int test1002() {
-    string s;
-    cin >> s;
-    const char *s_data = s.data();
-    int sum = 0;
-    for (int i = 0; i < s.length(); ++i) {
-        sum += s.data()[i] - '0';
+
+string readNum(int n) {
+    string numToStr[] = {"ling", "yi", "er", "san", "si", "wu", "liu", "qi", "ba", "jiu"};
+    if (n == 0) return numToStr[0];
+    vector<int> vs;
+    while (n) {
+        vs.push_back(n % 10);
+        n /= 10;
     }
-
-    char result[10] = {0};
-    sprintf(result, "%d", sum);
-
-    cout << strings[result[0] - '0'];
-    for (int i = 1; result[i] != '\0'; ++i) {
-        cout << " " << strings[result[i] - '0'];
+    string s = numToStr[vs.back()];
+    vs.pop_back();
+    while (!vs.empty()) {
+        s += " " + numToStr[vs.back()];
+        vs.pop_back();
     }
-    return 0;
+    return s;
 }
 
+
+int getSum(string s) {
+    int sum = 0;
+    for (auto c : s) {
+        sum += c - '0';
+    }
+    return sum;
+}
+
+int main() {
+    string str;
+    cin >> str;
+    cout << readNum(getSum(str)) << endl;
+    return 0;
+}
